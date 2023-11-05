@@ -290,6 +290,36 @@ var (
 			prometheus.GaugeValue,
 			nil,
 			"^rrset\\.cache\\.count$"),
+		newUnboundMetric(
+			"infra_cache_count",
+			"The Number of infra cached",
+			prometheus.GaugeValue,
+			nil,
+			"^infra\\.cache\\.count$"),
+		newUnboundMetric(
+			"key_cache_count",
+			"The Number of rrset cached",
+			prometheus.GaugeValue,
+			nil,
+			"^key\\.cache\\.count$"),
+		newUnboundMetric(
+			"query_ratelimited_total",
+			"Total number of queries that had been rate limited at the selected time range.",
+			prometheus.GaugeValue,
+			nil,
+			"^total\\.num\\.queries_ip_ratelimited$"),
+		newUnboundMetric(
+			"tcp_usage_current",
+			"Total number of queries received.",
+			prometheus.CounterValue,
+			[]string{"thread"},
+			"^thread(\\d+)\\.tcpusage$"),
+		newUnboundMetric(
+			"memory_stream_wait_count",
+			"The number of bytes in the stream wait buffers",
+			prometheus.GaugeValue,
+			nil,
+			"^mem\\.streamwait$"),
 	}
 )
 
