@@ -1,4 +1,4 @@
-module github.com/letsencrypt/unbound_exporter
+module github.com/itmax78/unboud_exporter
 
 go 1.20
 
